@@ -47,7 +47,7 @@ var t =document.querySelector('.watch-view-count').innerText.trim()
 
 console.log('max views:' + maxViews)
         console.log('views: ' + parseInt(r))
-if (parseInt(r)<=maxViews){
+if (parseInt(r)<=maxViews||r === 'no'||r === 'No'){
     console.log('yes');
     var nightmare = Nightmare({ show: true });
     nightmare.goto(link).then(function(){
