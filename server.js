@@ -44,15 +44,15 @@ var t =document.querySelector('.watch-view-count').innerText.trim()
         return t
     }).end()
     .then(function(r){
-
+var fr = r.replace(',','');
 console.log('max views:' + maxViews)
-        console.log('views: ' + parseInt(r))
-if (parseInt(r)<=maxViews||r === 'no'||r === 'No'){
+        console.log('views: ' + parseInt(fr))
+if (parseInt(fr)<=maxViews||fr === 'no'||fr === 'No'){
     console.log('yes');
     var nightmare = Nightmare({ show: true });
     nightmare.goto(link).then(function(){
 
-console.log(link);
+//console.log(link);
 
 
     })
